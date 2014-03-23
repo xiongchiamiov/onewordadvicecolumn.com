@@ -1,0 +1,27 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+<title>{{ site.title }}</title>
+<link href="http://onewordadvicecolumn.com/atom.xml" rel="self"/>
+<link href="http://onewordadvicecolumn.com"/>
+<updated>{{ site.time | date_to_xmlschema }}</updated>
+<id>http://onewordadvicecolumn.com</id>
+<author>
+<name>James Pearson</name>
+<email>pearson@changedmy.name</email>
+</author>
+
+{% for post in site.posts %}
+<entry>
+<title>{{ post.title }}</title>
+<link href="http://onewordadvicecolumn.com{{ post.url }}"/>
+<updated>{{ post.date | date_to_xmlschema }}</updated>
+<id>http://onewordadvicecolumn.com{{ post.id }}</id>
+<content type="html">{{ post.answer }}</content>
+</entry>
+{% endfor %}
+
+</feed>
