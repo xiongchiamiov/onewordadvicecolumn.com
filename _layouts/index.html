@@ -1,0 +1,14 @@
+{% include header.html %}
+
+{% for post in site.posts %}
+	<h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
+	<p class="date">
+		<time datetime="{{ post.date | date_to_xmlschema }}"
+		      itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time>
+	</p>
+	<h2 class="answer">{{ post.answer }}</h2>
+	<small><a href="{{ post.source }}">Question link.</a></small>
+{% endfor %}
+
+{% include footer.html %}
+

@@ -1,0 +1,12 @@
+{% include header.html %}
+
+<h1><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></h1>
+<p class="date">
+	<time datetime="{{ page.date | date_to_xmlschema }}"
+			itemprop="datePublished">{{ page.date | date: "%B %d, %Y" }}</time>
+</p>
+<h2 class="answer">{{ page.answer }}</h2>
+<small><a href="{{ page.source }}">Question link.</a></small>
+
+{% include footer.html %}
+
