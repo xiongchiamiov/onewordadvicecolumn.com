@@ -57,10 +57,10 @@ body {
 }
 
 a {
-  color: #d5000d;
+  color: #8C0009;
 }
-a:hover {
-  color: #c5000c;
+a:visited {
+  color: #60008C;
 }
 
 header {
